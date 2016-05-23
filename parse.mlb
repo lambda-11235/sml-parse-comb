@@ -1,0 +1,11 @@
+local
+    $(SML_LIB)/basis/basis.mlb
+
+    src/parse.sig
+    src/parse.sml
+    src/cparse.sig
+    src/cparse.sml
+in
+    structure Parse
+    structure CParse
+end

@@ -1,0 +1,12 @@
+library
+    structure Parse
+    structure CParse
+is
+
+    src/cparse.sig
+    src/cparse.sml
+    src/parse.sig
+    src/parse.sml
+
+    $/basis.cm
+    $/smlnj-lib.cm
