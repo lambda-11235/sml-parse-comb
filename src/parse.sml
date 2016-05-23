@@ -67,6 +67,8 @@ fun match x [] = PARSEERROR [{pos = EOF, got = NONE, error = EXPECTED x}]
 
 (* Derived parsers *)
 
+fun matchAnyOf x xs = foldr (fn (x, y) => alt x y) (match x) (map match xs)
+
 fun poption p = alt (pmap SOME p) (ret NONE)
 
 fun many p = bind (poption p) (fn ox => case ox of

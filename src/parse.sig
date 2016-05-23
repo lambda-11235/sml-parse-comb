@@ -54,6 +54,9 @@ signature PARSE = sig
 
     (* Derived parsers *)
 
+    (* Matches any of a list of tokens. At least one token is required. *)
+    val matchAnyOf : ''t -> ''t list -> (''t, ''t) parser
+
     (* Optionally parse a parser. *)
     val poption : ('a, 't) parser -> ('a option, 't) parser
 
